@@ -861,6 +861,28 @@ window._wpemojiSettings = {"baseUrl":"https:\/\/s.w.org\/images\/core\/emoji\/16
 		
 			</div>
 
+
+
+<script>
+  document.querySelector('.elementor-form').addEventListener('submit', function(e) {
+    e.preventDefault(); // Mencegah form dikirim ke server WordPress
+
+    const name = document.getElementById('form-field-name').value.trim();
+    const need = document.getElementById('form-field-need').value;
+    const message = document.getElementById('form-field-message').value.trim();
+
+    const phone = "6281298477761"; // Ganti dengan nomor WhatsApp kamu
+
+    const text = `Hello, I am interested in products from Fujita.%0A%0AName: ${name}%0AProduct: ${need}%0AMessage: ${message}%0A%0APlease get back to me soon. Thank you!`;
+
+    window.open(`https://wa.me/${phone}?text=${text}`, '_blank');
+  });
+</script>
+
+
+
+
+
 	
 </main>
 
